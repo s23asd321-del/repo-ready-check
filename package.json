@@ -1,0 +1,59 @@
+{
+  "name": "repo-ready-check",
+  "version": "0.2.0",
+  "description": "Local-first readiness checks for GitHub repositories.",
+  "type": "module",
+  "bin": {
+    "repo-ready-check": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run changelog:check && npm run pack:check",
+    "changelog:check": "node scripts/check-changelog.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s23asd321-del/repo-ready-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s23asd321-del/repo-ready-check/issues"
+  },
+  "homepage": "https://github.com/s23asd321-del/repo-ready-check#readme",
+  "keywords": [
+    "github",
+    "repository",
+    "readiness",
+    "audit",
+    "cli"
+  ],
+  "author": "s23asd321-del",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "docs/",
+    "examples/",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "DISCLAIMER.md",
+    "LICENSE",
+    "PRIVACY.md",
+    "README.md",
+    "repo-ready-check.config.example.json",
+    "ROADMAP.md",
+    "SECURITY.md"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}

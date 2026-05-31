@@ -1,0 +1,20 @@
+{
+  "requiredFiles": [
+    "CODE_OF_CONDUCT.md"
+  ],
+  "recommendedDirectories": [
+    "scripts"
+  ],
+  "ignorePaths": [
+    "vendor/",
+    "tmp/**"
+  ],
+  "disabledRules": [],
+  "ruleSeverities": {
+    "required-security": "error",
+    "configured-required-files": "warning"
+  },
+  "maxFileSizeBytes": 1048576,
+  "includeHidden": false,
+  "respectGitignore": true
+}
